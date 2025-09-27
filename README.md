@@ -39,7 +39,8 @@ Project link: [laobamac/OCLP-Mod](https://github.com/laobamac/OCLP-Mod)
 - Internal optical drive — identified by system, but **not tested**  
 - HDMI output — **no testing conditions available**  
 - AirDrop, Sidecar, Continuity features — **very likely unsupported**  
-- 3.5 mm headphone jack — **not tested**  
+- 3.5 mm headphone jack — **not tested**
+- Power management - **Partial supported**
 ## What Doesn’t Work ❌
 - Brightness adjustment  
 - Discrete GPU (dGPU)  
@@ -51,3 +52,18 @@ Project link: [laobamac/OCLP-Mod](https://github.com/laobamac/OCLP-Mod)
 4. After installation and first boot, run **OCLP‑Mod** to apply post‑install patches.  
    - This step unlocks full functionality for iGPU, Wi-Fi, and Bluetooth beyond what the EFI provides alone.  
 5. Reboot, and you should have a working system with all supported features active.
+## Important Notes
+1. **Hardware / BIOS Preparation**  
+   Before installing, make sure the **Intel AC 7260 Wi-Fi card** is correctly installed (or, for other models, a compatible Intel card supported by OpenIntelWireless). Also ensure all BIOS settings are configured properly (Secure Boot disabled, AHCI mode, etc.).
+
+2. **config.plist Customization**  
+   If your hardware differs or you have special needs, you may edit `config.plist` with a suitable editor. This EFI is built for **OpenCore version 1.0.5**.
+
+3. **OCLP‑Mod Requires Network**  
+   OCLP‑Mod needs internet to fetch patches, but at this stage Wi-Fi and Bluetooth may not work. Use a wired connection or a USB-connected cellular hotspot. Expected data usage: ~200 MB or more.
+
+4. **Platform (SMBIOS) Configuration Warning**  
+   For security, the provided `config.plist` does **not** include a full machine‑specific platform setup (i.e. no “three codes” / serials). You need to configure them yourself using the appropriate editor—but **ensure you set the platform to MacBookPro16,1**, otherwise USBMap.kext and internal devices may malfunction.
+
+5. **Boot Arguments / Verbose Mode**  
+   This EFI preserves `-v` in `boot-args`, so macOS boots in verbose (debug) mode by default. If you don’t need that, you can remove `-v`—but **do not remove the entire `boot-args` entry**, only the `-v` flag.
