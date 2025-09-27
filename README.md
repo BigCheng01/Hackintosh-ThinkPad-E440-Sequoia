@@ -21,4 +21,7 @@ OpenCore EFI for Lenovo ThinkPad E440, tested on macOS Sequoia 15.7.  This repos
 - On the E440, Lenovo's **BIOS whitelist** effectively allows only this Intel card among the factory options.  
   If your unit already has **7260**, **no hardware change is needed**.  
   If it ships with a different WLAN module, you **must replace it with Intel 7260** to pass the whitelist and work in macOS.
+  ## OCLP-Mod Support Requirement
+In addition to using this EFI, to fully enable **integrated graphics**, **Wi-Fi**, and **Bluetooth**, you must run **OCLP-Mod** (a modified version of OpenCore Legacy Patcher).  
+Project link: [laobamac/OCLP-Mod](https://github.com/laobamac/OCLP-Mod) :contentReference[oaicite:0]{index=0}  
 
