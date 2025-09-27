@@ -67,3 +67,10 @@ Project link: [laobamac/OCLP-Mod](https://github.com/laobamac/OCLP-Mod)
 
 5. **Boot Arguments / Verbose Mode**  
    This EFI preserves `-v` in `boot-args`, so macOS boots in verbose (debug) mode by default. If you don’t need that, you can remove `-v`—but **do not remove the entire `boot-args` entry**, only the `-v` flag.
+## Acknowledgements
+- [Acidanthera](https://github.com/acidanthera) — for **OpenCorePkg** and a suite of kexts, drivers, tools that underpin the Hackintosh ecosystem.  
+- [Dortania](https://dortania.github.io) — for their detailed OpenCore installation guides, troubleshooting docs, and community support.  
+- [OpenIntelWireless / itlwm](https://github.com/OpenIntelWireless/itlwm) — for enabling Intel wireless support on macOS via **itlwm.kext** and related tools. 
+- [zxystd](https://openintelwireless.github.io/itlwm/) — principal developer behind itlwm and IntelBluetoothFirmware, whose work makes Intel Wi-Fi/Bluetooth on macOS possible.
+- [laobamac / OCLP-Mod](https://github.com/laobamac/OCLP-Mod) — for the patched version of OpenCore Legacy Patcher used to unlock full GPU, Wi-Fi, Bluetooth support beyond EFI.  
+- All contributors, testers, and community members whose shared knowledge, issues, and code made this project feasible.
