@@ -1,0 +1,25 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary / backup files
+*.bak
+*.tmp
+*.log
+*.swp
+
+# Xcode / build leftovers (if used)
+*.dSYM/
+*.xcworkspace/
+*.xcuserdata/
+
+# OpenCore generated logs (not needed for sharing)
+opencore-*.txt
+*.efi.log
